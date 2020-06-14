@@ -13,12 +13,12 @@ namespace MvcClient.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        //private readonly SignInManager<IdentityUser> _signInManager;
 
-        public HomeController(SignInManager<IdentityUser> signInManager)
-        {
-            _signInManager = signInManager;
-        }
+        //public HomeController(SignInManager<IdentityUser> signInManager)
+        //{
+        //    _signInManager = signInManager;
+        //}
 
         //  [Route("/home")]
         public IActionResult Index() 
@@ -40,15 +40,15 @@ namespace MvcClient.Controllers
 
             return View(claims);
         }
-        public async Task<IActionResult> SignOut(SignOutViewModel vm)
-        {
-            if (!ModelState.IsValid)
-                return View(vm);
+        //public async Task<IActionResult> SignOut(SignOutViewModel vm)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return View(vm);
 
-            await _signInManager.SignOutAsync();
+        //    await _signInManager.SignOutAsync();
 
-            return RedirectToAction("Index");
+        //    return RedirectToAction("Index");
 
-        }
+        //}
     }
 }

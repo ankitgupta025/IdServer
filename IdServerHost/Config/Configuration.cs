@@ -54,7 +54,8 @@ namespace IdServerHost.Config
                 ClientId = "client_id_mvc",
                 ClientSecrets = {new Secret("client_secret_mvc".ToSha256())},
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = { "https://localhost:44321/signin-oidc" },
+                RedirectUris = {"https://mymvcclient.azurewebsites.net/signin-oidc" },
+                 //{ "https://localhost123:44321/signin-oidc" },
                 AlwaysIncludeUserClaimsInIdToken = true,
                 AllowedScopes = {
                     "ApiOne","ApiClient", StandardScopes.OpenId,StandardScopes.Profile,"rc.scope" },

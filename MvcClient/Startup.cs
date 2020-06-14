@@ -22,7 +22,7 @@ namespace MvcClient
             })
                 .AddCookie("Cookie")
                 .AddOpenIdConnect("oidc", config => {
-                    config.Authority = "https://localhost:44323/";// https://localhost:44323/";
+                    config.Authority = "https://myidentityserver4.azurewebsites.net/";// https://localhost:44323/";
                     config.ClientId = "client_id_mvc";// "client_id_mvc";
                     config.ClientSecret = "client_secret_mvc";// client_secret_mvc";
                     config.SaveTokens = false;
